@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap')
+$base-color: white
+$main-color: #FF6060
+$bg-gray: #F6F6F6
+$base-font: 'Montserrat', sans-serif
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: $base-font
+
+html
+    min-height: 100%
+
+body
+    display: flex
+    justify-content: center
+    min-height: 100vh
+    #root
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 100%
+        min-height: 100vh
+        background-color: $base-color
+        color: $main-color
+        .container
+            display: flex
+            margin: 0 auto
+            flex-direction: column
+            justify-content: flex-start
+            flex-grow: 1
+            width: 100%
+            max-width: 1240px
+            padding: 20px

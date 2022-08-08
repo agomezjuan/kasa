@@ -1,0 +1,26 @@
+main
+    display: flex
+    flex-flow: row wrap
+    gap: 30px
+    justify-content: center
+    align-items: center
+    background-color: $bg-gray
+    border-radius: 25px
+    margin: 43px 0
+    padding: 56px 50px
+    @import '_card'
+
+.apropos
+    display: flex
+    flex-flow: column wrap
+    justify-content: center
+    align-items: center
+    border-radius: 25px
+
+@media (max-width: 560px)
+    main
+        padding: 0
+        background-color: white
+        .card, .card-shadow
+            width: 100%
+            max-width: 450px
