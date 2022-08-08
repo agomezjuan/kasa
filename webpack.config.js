@@ -12,7 +12,14 @@ module.exports = {
   },
   resolve: {
     // extensión de archivos a tomar en cuenta
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
+    alias: {
+      components: path.resolve(__dirname, 'src/components/'),
+      pages: path.resolve(__dirname, 'src/pages/'),
+      sass: path.resolve(__dirname, 'src/sass/'),
+      logos: path.resolve(__dirname, 'src/assets/logos/'),
+      banners: path.resolve(__dirname, 'src/assets/banners/')
+    }
   },
   module: {
     // loaders para cada tipo de archivo
@@ -37,6 +44,10 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.(png|jpg|svg|gif)$/i,
+        type: 'asset'
       }
     ]
   },
@@ -52,7 +63,7 @@ module.exports = {
     })
   ],
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    port: 3050
+    static: path.join(__dirname, 'dist'),
+    historyApiFallback: true
   }
 };
