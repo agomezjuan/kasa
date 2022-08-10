@@ -1,16 +1,18 @@
 import React from 'react';
 import Carousel from './Carousel';
 import Dropdown from '../Dropdown';
-import data from '../../data/logements.json';
-import { useParams } from 'react-router-dom';
-import Pill from '../Pill';
-
-import './Logement.sass';
 import Host from './Host';
+import Pill from '../Pill';
+import { useParams } from 'react-router-dom';
+
+import data from '../../data/logements.json';
+import './Logement.sass';
 
 const Logement = () => {
   let params = useParams();
   let logement = data.find((logement) => logement.id === params.id);
+
+  console.log(logement.equipments);
 
   const details = [
     {
@@ -19,13 +21,12 @@ const Logement = () => {
     },
     {
       title: 'Équipements',
-      text: logement.equipements
+      text: logement.equipments
     }
   ];
 
-  console.log(details[1].text);
   return (
-    <div>
+    <div className='logement'>
       <Carousel props={logement.pictures} />
       <header className="info">
         <section className="info-logement">
