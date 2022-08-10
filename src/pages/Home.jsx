@@ -3,10 +3,11 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Cards from '../components/Cards';
 import Banner from '../components/Banner';
+import banner_main from '@banners/banner.png'
 
 const Home = () => {
   const bannerImage = {
-    url: './assets/banners/banner.png',
+    url: banner_main,
     text: 'Chez vous, partout et ailleurs',
     printText: true
   };
