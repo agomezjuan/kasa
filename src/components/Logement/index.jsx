@@ -12,8 +12,6 @@ const Logement = () => {
   let params = useParams();
   let logement = data.find((logement) => logement.id === params.id);
 
-  console.log(logement.equipments);
-
   const details = [
     {
       title: 'Description',

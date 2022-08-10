@@ -6,7 +6,10 @@ const Rating = ({ props }) => {
       <RatingStar key={x} props={x < props} />;
     }
   }
-  return <div className="rating"></div>;
+  return <div className="rating">
+
+    
+  </div>;
 };
 
 export default Rating;

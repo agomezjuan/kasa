@@ -7,9 +7,7 @@ const Dropdown = ({ props }) => {
 
   const [open, setOpen] = useState(false);
 
-  const Li = (props) => <li>{props}</li>;
-
-  const Ul = (children) => <ul>{children}</ul>;
+  const Li = ({ props }) => <li>{props}</li>;
 
   const openIcon = <i className="fa fa-solid fa-angle-down fa-2x"></i>;
   const closeIcon = <i className="fa fa-solid fa-angle-up fa-2x"></i>;
@@ -21,18 +19,22 @@ const Dropdown = ({ props }) => {
 
   if (typeof item.text === 'string') {
     block = openBlock();
-  } else {
+  } else if (Array.isArray(item.text)) {
     block = (
-      <Ul>
-        {item.text.map((li, index) => {
-          return <Li key={index}>{li}</Li>;
-        })}
-      </Ul>
+      <div id={`bloc-${index}`} className="container-block">
+        <div className="content-block">
+          <ul>
+            {item.text.map((element, index) => {
+              return <Li key={index} props={element} />;
+            })}
+          </ul>
+        </div>
+      </div>
     );
   }
 
   return (
-    <>
+    <div className='dropdown'>
       <div
         className="launcher"
         onClick={() => {
@@ -42,7 +44,7 @@ const Dropdown = ({ props }) => {
         {item.title} {open ? closeIcon : openIcon}
       </div>
       {open && block}
-    </>
+    </div>
   );
 };
 
