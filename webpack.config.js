@@ -14,11 +14,11 @@ module.exports = {
     // extensión de archivos a tomar en cuenta
     extensions: ['.js', '.jsx'],
     alias: {
-      components: path.resolve(__dirname, 'src/components/'),
-      pages: path.resolve(__dirname, 'src/pages/'),
-      sass: path.resolve(__dirname, 'src/sass/'),
-      logos: path.resolve(__dirname, 'src/assets/logos/'),
-      banners: path.resolve(__dirname, 'src/assets/banners/')
+      '@components': path.resolve(__dirname, 'src/components/'),
+      '@pages': path.resolve(__dirname, 'src/pages/'),
+      '@sass': path.resolve(__dirname, 'src/sass/'),
+      '@logos': path.resolve(__dirname, 'src/assets/logos/'),
+      '@banners': path.resolve(__dirname, 'src/assets/banners/')
     }
   },
   module: {
