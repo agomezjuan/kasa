@@ -3,10 +3,11 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Banner from '../components/Banner';
 import Dropdown from '../components/Dropdown';
+import banner from '@banners/kaBkci_8qcdvQ-unsplash.png'
 
 const APropos = () => {
   const bannerImage = {
-    url: './assets/banners/kaBkci_8qcdvQ-unsplash.png',
+    url: banner,
     text: 'Beautiful landscape',
     printText: false
   };

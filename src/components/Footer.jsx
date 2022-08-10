@@ -1,8 +1,8 @@
 import React from 'react';
 import Logo from './Logo';
+import logoUrl from '@logos/LOGO-FOOTER.png';
 
 const Footer = () => {
-  const logoUrl = '../assets/logos/LOGO-FOOTER.png';
   return (
     <footer>
       <Logo url={logoUrl} />
