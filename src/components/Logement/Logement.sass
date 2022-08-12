@@ -33,20 +33,23 @@
 
         .info-host
             display: flex
-            align-items: flex-start
-
-            .name
-                margin-right: 0.5rem
-                font-size: 1.1rem
-                line-height: 1.5rem
-                text-align: right
-                padding-top: 0.3rem
-                margin-right: 0.5rem
-            img
-                width: 64px
-                height: 64px
-                border-radius: 50%
-            .rating
+            flex-direction: column
+            align-items: flex-end
+            gap: 20px
+            .profile
+                display: flex
+                .name
+                    margin-right: 0.5rem
+                    font-size: 1.1rem
+                    line-height: 1.5rem
+                    text-align: right
+                    padding-top: 0.3rem
+                    margin-right: 0.5rem
+                img
+                    width: 64px
+                    height: 64px
+                    border-radius: 50%
+                .rating
 
     .details
         display: flex

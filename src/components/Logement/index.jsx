@@ -3,9 +3,10 @@ import Carousel from './Carousel';
 import Dropdown from '../Dropdown';
 import Host from './Host';
 import Pill from '../Pill';
+import Rating from './Rating';
 import { useParams } from 'react-router-dom';
 
-import data from '../../data/logements.json';
+import data from '@data/logements.json';
 import './Logement.sass';
 
 const Logement = () => {
@@ -24,8 +25,8 @@ const Logement = () => {
   ];
 
   return (
-    <div className='logement'>
-      <Carousel props={logement.pictures} />
+    <div className="logement">
+      <Carousel pictures={logement.pictures} />
       <header className="info">
         <section className="info-logement">
           <h2>{logement.title}</h2>
@@ -38,6 +39,7 @@ const Logement = () => {
         </section>
         <section className="info-host">
           <Host props={logement.host} />
+          <Rating stars={parseInt(logement.rating)} />
         </section>
       </header>
       <section className="details">

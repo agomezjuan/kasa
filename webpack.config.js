@@ -14,7 +14,9 @@ module.exports = {
     // extensión de archivos a tomar en cuenta
     extensions: ['.js', '.jsx'],
     alias: {
+      '@data': path.resolve(__dirname, 'src/data/'),
       '@components': path.resolve(__dirname, 'src/components/'),
+      '@routes': path.resolve(__dirname, 'src/routes/'),
       '@pages': path.resolve(__dirname, 'src/pages/'),
       '@sass': path.resolve(__dirname, 'src/sass/'),
       '@logos': path.resolve(__dirname, 'src/assets/logos/'),

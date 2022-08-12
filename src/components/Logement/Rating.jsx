@@ -1,15 +1,15 @@
 import React from 'react';
 
-const Rating = ({ props }) => {
-  {
-    for (const x of Array(5).keys()) {
-      <RatingStar key={x} props={x < props} />;
-    }
-  }
-  return <div className="rating">
+const Star = () => <i className="fa fa-solid fa-star fa-2x star"></i>;
 
-    
-  </div>;
+const Rating = ({ stars }) => {
+  let starsArray = [1, 2, 3, 4, 5];
+
+  return (
+    <div className="rating">
+      {starsArray.map((i) => (i <= stars ? <Star key={i} /> : <Star key={i} />))}
+    </div>
+  );
 };
 
 export default Rating;
