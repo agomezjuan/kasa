@@ -11,7 +11,8 @@
     margin-top: 20px
     overflow: hidden
     img
-        position: absolute
+        height: 100%
+        width: 100%
         object-fit: cover
         z-index: 0
     .carousel-buttons
@@ -49,3 +50,12 @@
         cursor: pointer
         transition: all 0.3s ease
         z-index: 4
+
+@media (max-width: 560px)
+    .carousel
+        height: 225px
+        .current
+            bottom: 10px
+            width: 40px
+            height: 40px
+            font-size: 1rem

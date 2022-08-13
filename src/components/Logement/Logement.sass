@@ -8,7 +8,7 @@
         padding: 1rem 0
         text-align: center
         margin-top: 1rem
-        h1
+        h2
             font-size: 1.5rem
             margin: 0
         p
@@ -49,7 +49,13 @@
                     width: 64px
                     height: 64px
                     border-radius: 50%
-                .rating
+            .rating
+                &>i
+                    color: $medium-gray
+                    font-size: 1.6rem
+                    margin-right: 0.2rem
+                &>.star
+                    color: $main-color
 
     .details
         display: flex
@@ -61,21 +67,52 @@
                 width: 100%
 
 @media (max-width: 560px)
-    .info-host
-        display: flex
-        align-items: flex-start
+    .logement
+        header.info
+            display: flex
+            flex-direction: column
+            h2
+                font-size: 1.3rem
+                margin: 0
+                line-height: 1.8rem
+                text-align: left
+            p
+                font-size: 0.8rem
+                margin: 0
+            .info-logement
+                margin-bottom: 1rem
+                .pill
+                    font-size: 0.65rem
+                    min-width: 85px
+                    height: 22px
+            .info-host
+                display: flex
+                flex-direction: row-reverse
+                align-items: center
+                justify-content: space-between
+                .profile
+                    align-items: center
+                    .name
+                        margin: 0 0.5rem
+                        font-size: 0.7rem
+                        line-height: 1rem
 
-        .name
-            margin-right: 0.5rem
-            font-size: 0.8rem
-            line-height: 1.5rem
-            text-align: right
-            padding-top: 0.3rem
-            margin-right: 0.5rem
-        img
-            width: 32px
-            height: 32px
-            border-radius: 50%
-        .rating
-    .details
-        display: flex
+                    img
+                        width: 32px
+                        height: 32px
+                        border-radius: 50%
+                .rating
+                    display: flex
+                    align-items: center
+                    &>i
+                        color: $medium-gray
+                        font-size: 1.3rem
+                        margin-right: 0.2rem
+                    &>.star
+                        color: $main-color
+        .details
+            display: flex
+            flex-direction: column
+            gap: 0.8rem
+            .dropdown
+                width: 100%
