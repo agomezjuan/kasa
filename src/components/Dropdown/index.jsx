@@ -5,7 +5,7 @@ const Dropdown = ({ props }) => {
   let block;
   const [item, index] = props;
 
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   const Li = ({ props }) => <li>{props}</li>;
 
